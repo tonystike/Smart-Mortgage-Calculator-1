@@ -1,0 +1,5 @@
+{
+  "name": "Smart Mortgage Calculator",
+  "description": "A comprehensive mortgage repayment calculator offering standard calculation methods (Maturity, Equal Principal, Equal P&I) with AI-powered financial analysis.",
+  "requestFramePermissions": []
+}
