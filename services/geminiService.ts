@@ -11,12 +11,7 @@ const getRepaymentMethodName = (method: RepaymentMethod) => {
 };
 
 export const getAIAdvice = async (input: LoanInput, result: CalculationResult): Promise<string> => {
-  const apiKey = process.env.API_KEY;
-  if (!apiKey) {
-    return "API 키가 설정되지 않았습니다. .env 파일을 확인해주세요.";
-  }
-
-  const ai = new GoogleGenAI({ apiKey });
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   const prompt = `
     당신은 전문 재무 설계사입니다. 사용자가 다음과 같은 주택담보대출 조건을 입력했습니다:
